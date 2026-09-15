@@ -4,7 +4,7 @@
 
 I'm Hakim Fakhar, a Cybersecurity Engineering student at ENSA (Cybersecurity & Embedded Systems track), working toward a SOC analyst role. This lab rebuilds the detection side of my earlier [Wazuh RDP Intrusion Detection Lab](https://github.com/hakimfakhar/Wazuh-RDP-Intrusion-Detection-Lab) inside **Microsoft Sentinel**, using the same target VM and the same attack (an RDP brute-force with Hydra) but a completely different detection stack: Azure Monitor Agent, Sysmon, Log Analytics, KQL hunting queries, and a Sentinel Analytics Rule instead of Wazuh/Suricata/Chainsaw.
 
-The goal was to see the same attack through a different SOC toolset end to end — connect the data, hunt manually first, then turn what I found into a real scheduled detection, confirm it fires, investigate it, and automate the response — and document the whole process the way I would for a real SOC engagement. The [full report](Report/report.pdf) covers all of this in depth, including two findings that mattered as much as anything that worked cleanly: a `LogonType` filtering mistake that made the first version of the detection unusable, and an honest note about which MITRE ATT&CK coverage is actually this lab's own versus inherited from content-hub template rules.
+The goal was to see the same attack through a different SOC toolset end to end — connect the data, hunt manually first, then turn what I found into a real scheduled detection, confirm it fires, investigate it, and automate the response — and document the whole process the way I would for a real SOC engagement. The [full report](Report/sentinel-lab-report.pdf) covers all of this in depth, including two findings that mattered as much as anything that worked cleanly: a `LogonType` filtering mistake that made the first version of the detection unusable, and an honest note about which MITRE ATT&CK coverage is actually this lab's own versus inherited from content-hub template rules.
 
 ## Environment
 
@@ -78,7 +78,7 @@ Screenshots/
   09-Automation-Playbook/   Logic App playbook + automation rule wiring
 Configuration/               Workspace / DCR / connector setup notes
 Detection-Rules/             KQL queries and MITRE mapping
-Report/                     Full LaTeX writeup report.pdf
+Report/                     Full LaTeX writeup sentinel-lab-report.pdf
 ```
 
 ## Status
